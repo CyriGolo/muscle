@@ -1,7 +1,7 @@
 let interval;
 let run = false;
-const allDiv = document.querySelectorAll('.progress-bar')
-const timers = document.querySelectorAll('.timer')
+let allDiv;
+let timers;
 
 function startTimer(time, index) {
     allDiv[index].classList.add('run');
@@ -31,16 +31,21 @@ function updateProgress(time, timer, index){
     allDiv[index].style.background = `radial-gradient(closest-side, #1c1c1d 90%, transparent 80% 100%),conic-gradient(#353535 ${progressPercentage}%, #fff 0)`
 }
 
-for(let i = 0; i<allDiv.length; i++) {
-    allDiv[i].addEventListener('click',()=>{
-        if(!allDiv[i].classList.contains('run')){
-            if(!run) {
-                startTimer(timers[i].dataset.duration, i);
+window.addEventListener("load", ()=>{
+    allDiv = document.querySelectorAll('.progress-bar')
+    timers = document.querySelectorAll('.timer')
+    console.log("load");
+    for(let i = 0; i<allDiv.length; i++) {
+        allDiv[i].addEventListener('click',()=>{
+            if(!allDiv[i].classList.contains('run')){
+                if(!run) {
+                    startTimer(timers[i].dataset.duration, i);
+                } else {
+                    alert("Un timer est déjà en cours d'utilisation")
+                }
             } else {
-                alert("Un timer est déjà en cours d'utilisation")
-            }
-        } else {
-            endTimer(timers[i].dataset.duration, i);
-        };
-    });
-}
+                endTimer(timers[i].dataset.duration, i);
+            };
+        });
+    };
+});
