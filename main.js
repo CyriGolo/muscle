@@ -32,9 +32,8 @@ function updateProgress(time, timer, index){
 }
 
 window.addEventListener("load", ()=>{
-    allDiv = document.querySelectorAll('.progress-bar')
-    timers = document.querySelectorAll('.timer')
-    console.log("load");
+    allDiv = document.querySelectorAll('.progress-bar');
+    timers = document.querySelectorAll('.timer');
     for(let i = 0; i<allDiv.length; i++) {
         allDiv[i].addEventListener('click',()=>{
             if(!allDiv[i].classList.contains('run')){
