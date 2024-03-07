@@ -7,6 +7,7 @@
 }
 
 body {
+    height: 100dvh;
     background-color: #151516;
     font-family: "Poppins";
     user-select: none;
@@ -25,7 +26,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
     gap: 2rem;
 }
 
@@ -37,11 +37,11 @@ article {
     -webkit-backdrop-filter: blur( 20px );
     border-radius: 20px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 2rem;
+    padding: 1rem 2rem;
     width: 80dvw;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 details {
@@ -123,6 +123,10 @@ label {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
+    color: white;
+    font-family: "Poppins";
+    font-size: 1rem;
 }
 
 .timers {
