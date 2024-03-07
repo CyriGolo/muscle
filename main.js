@@ -7,6 +7,9 @@ function startTimer(time, index) {
     allDiv[index].classList.add('run');
     run = true;
     let timer = time;
+    timer--
+    updateProgress(time, timer, index);
+    timers[index].textContent = timer + "s"
     interval = setInterval(() => {
         timer--;
         updateProgress(time, timer, index);
