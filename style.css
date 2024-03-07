@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    background-color: #151516;
+    font-family: "Poppins";
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    gap: .5rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: scroll;
+}
+
+article {
+    color: white;
+    background: rgba( 36, 36, 38, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba(78, 78, 78, 0.137);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1rem 2rem;
+    width: 80dvw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+details {
+    padding: 1rem 2rem;
+    background-color: #2f2f2f;
+    border-radius: 15px;
+}
+
+ul, summary, ol {
+    list-style: none;
+}
+
+summary {
+    cursor: pointer;
+}
+
+h4 {
+    margin-top: .5rem;
+    font-weight: 500;
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+
+.rep {
+    color: #adadad;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-input:checked + label .checkbox:after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    color: white;
+    font-family: "Poppins";
+    font-size: 1rem;
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, #1c1c1d 90%, transparent 80% 100%),
+        conic-gradient(#fff 0%, #353535 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
