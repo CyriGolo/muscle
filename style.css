@@ -33,6 +33,10 @@ main {
     overflow: scroll;
 }
 
+main::-webkit-scrollbar { 
+    display: none;
+}
+
 article {
     color: white;
     background: rgba( 36, 36, 38, 0.45 );
