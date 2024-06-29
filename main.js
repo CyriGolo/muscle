@@ -23,7 +23,10 @@ fetch('./data.json')
                                 <a href="https://www.google.com/search?q=${exercise.name.split(' ').join('+')}&source=lnms&tbm=isch" target="_blank">${exercise.name}</a>
                             </h4>
                             ${exercise.serie ? `<p class="rep">${exercise.serie}x | ${exercise.repetition}</p>` : ""}
+                            ${exercise.pause ? `<p class="rep">Pause : ${exercise.pause}s` : ""}
                         </li>
+                        ${exercise.interval ? `<hr><p>${Math.floor(exercise.interval / 60) + "m"}</p><hr>` : ""}
+                        
                     `;
                 });
                 list.innerHTML += `
