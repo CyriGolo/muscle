@@ -141,3 +141,8 @@ label {
     flex-wrap: wrap;
     gap: .5rem;
 }
+
+a {
+    color: white;
+    font-weight: 500;
+}

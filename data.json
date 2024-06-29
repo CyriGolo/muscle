@@ -1,0 +1,234 @@
+{
+    "seance": [
+        {
+            "id": 1,
+            "name": "Poitrine et Triceps",
+            "duration": 60,
+            "exercise": [
+                {
+                    "id": 1,
+                    "name": "Échauffement",
+                    "duration": 10
+                },
+                {
+                    "id": 2,
+                    "name": "Développé couché incliné avec haltères",
+                    "duration": 15,
+                    "difficulty": "RPE 8",
+                    "serie": 4,
+                    "repetition": "8-12",
+                    "pause": 45
+                },
+                {
+                    "id": 3,
+                    "name": "Écarté couché avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 4,
+                    "name": "Pompes",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "max",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 5,
+                    "name": "Extensions triceps au-dessus de la tête avec haltère",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "10-12",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 6,
+                    "name": "Dips sur banc",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "max",
+                    "pause": 45
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Dos et Biceps",
+            "duration": 75,
+            "exercise": [
+                {
+                    "id": 1,
+                    "name": "Échauffement",
+                    "duration": 10
+                },
+                {
+                    "id": 2,
+                    "name": "Rowing buste penché avec haltères",
+                    "duration": 15,
+                    "difficulty": "RPE 8",
+                    "serie": 4,
+                    "repetition": "8-12",
+                    "pause": 45
+                },
+                {
+                    "id": 3,
+                    "name": "Rowing haltère à un bras",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 4,
+                    "name": "Tractions inversées",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "max",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 5,
+                    "name": "Curl biceps avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "10-12",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 6,
+                    "name": "Curl marteau avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 45
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Jambes",
+            "duration": 75,
+            "exercise": [
+                {
+                    "id": 1,
+                    "name": "Échauffement",
+                    "duration": 10
+                },
+                {
+                    "id": 2,
+                    "name": "Squat avec haltères",
+                    "duration": 15,
+                    "difficulty": "RPE 8",
+                    "serie": 4,
+                    "repetition": "10-12",
+                    "pause": 45
+                },
+                {
+                    "id": 3,
+                    "name": "Fentes avant avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 4,
+                    "name": "Soulevé de terre roumain avec haltères",
+                    "duration": 15,
+                    "difficulty": "RPE 8",
+                    "serie": 4,
+                    "repetition": "8-12",
+                    "pause": 45,
+                    "interval": 60
+                },
+                {
+                    "id": 5,
+                    "name": "Extensions mollets avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "15-20",
+                    "pause": 45
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Épaules et Abdominaux",
+            "duration": 60,
+            "exercise": [
+                {
+                    "id": 1,
+                    "name": "Échauffement",
+                    "duration": 10
+                },
+                {
+                    "id": 2,
+                    "name": "Développé militaire avec haltères",
+                    "duration": 15,
+                    "difficulty": "RPE 8",
+                    "serie": 4,
+                    "repetition": "8-12",
+                    "pause": 45
+                },
+                {
+                    "id": 3,
+                    "name": "Élévations latérales avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 30,
+                    "interval": 60
+                },
+                {
+                    "id": 4,
+                    "name": "Élévations frontales avec haltères",
+                    "duration": 10,
+                    "difficulty": "RPE 7",
+                    "serie": 3,
+                    "repetition": "12-15",
+                    "pause": 30,
+                    "interval": 60
+                },
+                {
+                    "id": 5,
+                    "name": "Crunchs au sol",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "max",
+                    "pause": 30,
+                    "interval": 60
+                },
+                {
+                    "id": 6,
+                    "name": "Plank",
+                    "duration": 10,
+                    "difficulty": "RPE 8",
+                    "serie": 3,
+                    "repetition": "1-2 minutes",
+                    "pause": 60
+                }
+            ]
+        }
+    ]
+}

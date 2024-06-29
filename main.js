@@ -1,7 +1,43 @@
-let interval;
-let run = false;
-let allDiv;
-let timers;
+const list = document.querySelector('#list');
+import data from "/data.json";
+
+
+data.seance.forEach(seance => {
+    let listExercises = "";
+    seance.exercise.forEach(exercise => {
+        const checkboxId = `checkbox-${seance.id}-${exercise.id}`;
+        listExercises += `
+            <li>
+                <h4 class="title">
+                    <input type="checkbox" class="checkbox-input" id="${checkboxId}">
+                    <label for="${checkboxId}">
+                        <span class="checkbox"></span>
+                    </label>
+                    <a href="https://www.google.com/search?q=${exercise.name.split(' ').join('+')}&source=lnms&tbm=isch" target="_blank">${exercise.name}</a>
+                </h4>
+                ${exercise.serie ? `<p class="rep">${exercise.serie}x | ${exercise.repetition}</p>` : ""}
+            </li>
+        `;
+    });
+    list.innerHTML += `
+        <li>
+            <details>
+                <summary>${seance.name}</summary>
+                <ol>
+                    ${listExercises}
+                </ol>
+            </details>
+        </li>
+    `
+});
+
+
+// TIMER
+
+let interval,
+    run = false,
+    allDiv,
+    timers
 
 function startTimer(time, index) {
     allDiv[index].classList.add('run');
