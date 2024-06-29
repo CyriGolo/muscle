@@ -1,36 +1,46 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 const list = document.querySelector('#list');
-import data from "/data.json";
 
-
-data.seance.forEach(seance => {
-    let listExercises = "";
-    seance.exercise.forEach(exercise => {
-        const checkboxId = `checkbox-${seance.id}-${exercise.id}`;
-        listExercises += `
-            <li>
-                <h4 class="title">
-                    <input type="checkbox" class="checkbox-input" id="${checkboxId}">
-                    <label for="${checkboxId}">
-                        <span class="checkbox"></span>
-                    </label>
-                    <a href="https://www.google.com/search?q=${exercise.name.split(' ').join('+')}&source=lnms&tbm=isch" target="_blank">${exercise.name}</a>
-                </h4>
-                ${exercise.serie ? `<p class="rep">${exercise.serie}x | ${exercise.repetition}</p>` : ""}
-            </li>
-        `;
-    });
-    list.innerHTML += `
-        <li>
-            <details>
-                <summary>${seance.name}</summary>
-                <ol>
-                    ${listExercises}
-                </ol>
-            </details>
-        </li>
-    `
-});
-
+fetch('./data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            data.seance.forEach(seance => {
+                let listExercises = "";
+                seance.exercise.forEach(exercise => {
+                    const checkboxId = `checkbox-${seance.id}-${exercise.id}`;
+                    listExercises += `
+                        <li>
+                            <h4 class="title">
+                                <input type="checkbox" class="checkbox-input" id="${checkboxId}">
+                                <label for="${checkboxId}">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <a href="https://www.google.com/search?q=${exercise.name.split(' ').join('+')}&source=lnms&tbm=isch" target="_blank">${exercise.name}</a>
+                            </h4>
+                            ${exercise.serie ? `<p class="rep">${exercise.serie}x | ${exercise.repetition}</p>` : ""}
+                        </li>
+                    `;
+                });
+                list.innerHTML += `
+                    <li>
+                        <details>
+                            <summary>${seance.name}</summary>
+                            <ol>
+                                ${listExercises}
+                            </ol>
+                        </details>
+                    </li>
+                `
+            });
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
 
 // TIMER
 
@@ -87,3 +97,4 @@ window.addEventListener("load", ()=>{
         });
     };
 });
+})
