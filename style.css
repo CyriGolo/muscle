@@ -146,3 +146,17 @@ a {
     color: white;
     font-weight: 500;
 }
+
+h5 {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+/* .hidden {
+    display: none;
+}
+
+details ol:not(.hidden) + ol {
+    display: none;
+} */

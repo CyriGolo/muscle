@@ -11,8 +11,9 @@ fetch('./data.json')
         .then(data => {
             data.seance.forEach(seance => {
                 let listExercises = "";
+                let listQuickExercises = "";
                 seance.exercise.forEach(exercise => {
-                    const checkboxId = `checkbox-${seance.id}-${exercise.id}`;
+                    const checkboxId = `checkbox-${seance.id}-${exercise.id + 1}`;
                     listExercises += `
                         <li>
                             <h4 class="title">
@@ -26,20 +27,57 @@ fetch('./data.json')
                             ${exercise.pause ? `<p class="rep">Pause : ${exercise.pause}s` : ""}
                         </li>
                         ${exercise.interval ? `<hr><p>${Math.floor(exercise.interval / 60) + "m"}</p><hr>` : ""}
-                        
+                    `;
+                });
+                seance.quick.exercise.forEach(exercise => {
+                    const checkboxId = `checkbox-${seance.id}-${exercise.id + 10000}`;
+                    listQuickExercises += `
+                        <li>
+                            <h4 class="title">
+                                <input type="checkbox" class="checkbox-input" id="${checkboxId }">
+                                <label for="${checkboxId}">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <a href="https://www.google.com/search?q=${exercise.name.split(' ').join('+')}&source=lnms&tbm=isch" target="_blank">${exercise.name}</a>
+                            </h4>
+                            ${exercise.serie ? `<p class="rep">${exercise.serie}x | ${exercise.repetition}</p>` : ""}
+                            ${exercise.pause ? `<p class="rep">Pause : ${exercise.pause}s` : ""}
+                        </li>
+                        ${exercise.interval ? `<hr><p>${Math.floor(exercise.interval / 60) + "m"}</p><hr>` : ""}
                     `;
                 });
                 list.innerHTML += `
                     <li>
                         <details>
                             <summary>${seance.name}</summary>
-                            <ol>
+                            <h5>
+                                <input type="checkbox" class="checkbox-input quick-checkbox" id="${seance.id}">
+                                <label for="${seance.id}">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <p>Quick Session</p>
+                            </h5>
+                            <ol class="quick hidden">
+                                ${listQuickExercises}
+                            </ol>
+                            <ol class="normal">
                                 ${listExercises}
                             </ol>
                         </details>
                     </li>
                 `
             });
+            const checkboxes = document.querySelectorAll('.quick-checkbox');
+            const quick = document.querySelectorAll('.quick');
+            for(let i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].addEventListener('change', ()=>{
+                    if(checkboxes[i].checked) {
+                        quick[i].classList.remove('hidden');
+                    } else {
+                        quick[i].classList.add('hidden');
+                    }
+                })
+            }
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
