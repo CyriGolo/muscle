@@ -153,10 +153,10 @@ h5 {
     gap: .4rem;
 }
 
-/* .hidden {
+.hidden {
     display: none;
 }
 
 details ol:not(.hidden) + ol {
     display: none;
-} */
+}
