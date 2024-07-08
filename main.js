@@ -49,8 +49,11 @@ fetch('./data.json')
                 list.innerHTML += `
                     <li>
                         <details>
-                            <summary>${seance.name}</summary>
-                            <h5>
+                            <summary>
+                                <h3>${seance.name}</h3>
+                                <div class="duration">${Math.floor(seance.duration / 60) + "h" + seance.duration % 60}</div>
+                            </summary>
+                            <h5 class="quick-input">
                                 <input type="checkbox" class="checkbox-input quick-checkbox" id="${seance.id}">
                                 <label for="${seance.id}">
                                     <span class="checkbox"></span>

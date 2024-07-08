@@ -439,21 +439,21 @@
                 },
                 {
                     "id": 3,
-                    "name": "Pompe surélevée lestée mains écartées",
+                    "name": "Développé incliné avec haltères",
                     "duration": 15,
                     "difficulty": "RPE 7",
                     "serie": 3,
-                    "repetition": "12-20",
+                    "repetition": "12-15",
                     "pause": 60,
                     "interval": 60
                 },
                 {
                     "id": 4,
-                    "name": "Écarté décliné avec haltères",
+                    "name": "Pull-over avec haltère",
                     "duration": 12,
                     "difficulty": "RPE 7",
                     "serie": 2,
-                    "repetition": "12-20",
+                    "repetition": "12-15",
                     "pause": 60,
                     "interval": 60
                 },
@@ -518,7 +518,7 @@
                     },
                     {
                         "id": 3,
-                        "name": "Pompe surélevée lestée mains écartées",
+                        "name": "Développé incliné avec haltères",
                         "duration": 6,
                         "difficulty": "RPE 7",
                         "serie": 2,
@@ -527,7 +527,7 @@
                     },
                     {
                         "id": 4,
-                        "name": "Écarté décliné avec haltères",
+                        "name": "Pull-over avec haltère",
                         "duration": 6,
                         "difficulty": "RPE 7",
                         "serie": 2,
